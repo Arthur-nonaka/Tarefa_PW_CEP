@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CEP_Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body style="height: 100vh; background-color: rgb(43, 71, 112)">
+    <div>
+      <div class="hero is-info p-2">
+        <div style="display: flex">
+          <div class="field m-2">
+            <label class="label">Nome:</label>
+            <input class="input" id="name" type="text" style="width: 300px;" />
+          </div>
+          <div class="field m-2">
+            <label class="label">Email:</label>
+            <input class="input" id="email" type="text" style="width: 300px;" />
+          </div>
+          <div class="field m-2">
+            <label class="label">CEP:</label>
+            <div style="display: flex; align-items: center">
+              <input class="input" id="cep" type="text" style="width: 130px;" />
+              <button class="button ml-2 is-small" id="verificar">Verificar</button>
+            </div>
+          </div>
+          <hr>
+        </div>
+        
+        <button class="button m-2" id="button" style="width: 100px">
+          Enviar
+        </button>
+      </div>
+      <div class="card m-3" style="width: 300px;">
+        <div class="card-content">
+            <div class="content">
+                <label class="label"> Estado: </label>
+                <label class="label is-small" id="uf"></label>
+                <label class="label"> Cidade: </label>
+                <label class="label is-small" id="cidade"></label>
+                <label class="label"> Bairro: </label>
+                <label class="label is-small" id="bairro"></label>
+                <label class="label"> Rua: </label>
+                <label class="label is-small" id="rua"></label>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
